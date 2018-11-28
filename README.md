@@ -11,9 +11,12 @@ frontier_exploration, is a ROS package to map an unknown indoor environment usin
 The Solo Iterative Process (SIP) model, which is an iterative process that repeatedly modifies software and is suitable for the stages of software evolution, testing and servicing, will
 be followed throughout the course of the project as it is being built by a single developer (rohithjayarajan).
 
-[Log Details for the Project][reference-id-for-log-details]
+[SIP Log Details for the Project][reference-id-for-log-details]
+
+[Sprint Planning Notes for the Project][reference-id-for-SIP-planning-notes]
 
 [reference-id-for-log-details]: https://docs.google.com/spreadsheets/d/1UNbX6C1j1Hg_Kum1Vs86YjXetcIUCho0L21Nnyfcikk/edit?usp=sharing
+[reference-id-for-SIP-planning-notes]: https://docs.google.com/document/d/1JhXZGQyf6TzoRhE24SGvOkqI1fCqavrlQTYm3uAaZm8/edit?usp=sharing
 
 ## Dependencies
 
