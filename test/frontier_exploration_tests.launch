@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+
+<launch>
+  <test pkg="frontier_exploration" test-name="frontier_exploration_tests" type="frontier_exploration_tests" />
+</launch>
