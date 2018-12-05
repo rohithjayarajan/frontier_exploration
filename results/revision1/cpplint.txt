@@ -1,0 +1,8 @@
+Done processing ./src/frontier_exploration/include/frontier_exploration/frontier_exploration_node.hpp
+Done processing ./src/frontier_exploration/include/frontier_exploration/map_structure.hpp
+Done processing ./src/frontier_exploration/include/frontier_exploration/helper_functions.hpp
+Done processing ./src/frontier_exploration/src/frontier_exploration_node.cpp
+Done processing ./src/frontier_exploration/src/helper_functions.cpp
+Done processing ./src/frontier_exploration/src/main.cpp
+Done processing ./src/frontier_exploration/src/map_structure.cpp
+
