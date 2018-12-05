@@ -57,7 +57,7 @@ class MapStructure {
    *   @param nothgeometry_msgs::Pose value for origin
    *   @return nothing
    */
-  MapStructure(double &resolution, unsigned const int &width,
+  MapStructure(const double &resolution, unsigned const int &width,
                unsigned const int &height, const geometry_msgs::Pose &origin);
   /**
    *   @brief Default destructor for MapStructure
@@ -72,7 +72,7 @@ class MapStructure {
    *   @param double value of resolution
    *   @return nothing
    */
-  void setResolution(double &resolution_);
+  void setResolution(const double &resolution_);
   /**
    *   @brief setter for width variable
    *

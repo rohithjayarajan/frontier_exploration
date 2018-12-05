@@ -33,7 +33,7 @@ MapStructure::MapStructure() {}
  *   @param nothgeometry_msgs::Pose value for origin
  *   @return nothing
  */
-MapStructure::MapStructure(double &resolution, unsigned const int &width,
+MapStructure::MapStructure(const double &resolution, unsigned const int &width,
                            unsigned const int &height,
                            const geometry_msgs::Pose &origin) {}
 /**
