@@ -33,8 +33,7 @@ MapStructure::MapStructure() {}
  *   @param nothgeometry_msgs::Pose value for origin
  *   @return nothing
  */
-MapStructure::MapStructure(unsigned const int &resolution,
-                           unsigned const int &width,
+MapStructure::MapStructure(double &resolution, unsigned const int &width,
                            unsigned const int &height,
                            const geometry_msgs::Pose &origin) {}
 /**
@@ -47,10 +46,10 @@ MapStructure::~MapStructure() {}
 /**
  *   @brief setter for resolution variable
  *
- *   @param unsigned int value of width resolution
+ *   @param double value of resolution
  *   @return nothing
  */
-void MapStructure::setResolution(unsigned const int &resolution_) {}
+void MapStructure::setResolution(const double &resolution_) {}
 /**
  *   @brief setter for width variable
  *
@@ -111,9 +110,9 @@ void MapStructure::setMapData(const double &data_) {}
  *   @brief getter for resolution variable
  *
  *   @param nothing
- *   @return unsigned int value of width resolution
+ *   @return unsigned int value of resolution
  */
-unsigned int MapStructure::getResolution() { return 0; }
+double MapStructure::getResolution() { return 0.0; }
 /**
  *   @brief getter for width variable
  *
