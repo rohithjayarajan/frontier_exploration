@@ -60,7 +60,8 @@ class HelperFunctions {
   double computeDistance(const geometry_msgs::Point &p1,
                          const geometry_msgs::Point &p2);
   /**
-   *   @brief function to compute gradient between two pairs of points
+   *   @brief function to compute gradient between two pairs of points in
+   * radians
    *
    *   @param two pairs of 2D points
    *   @return double value of distance between two pairs of points

@@ -44,7 +44,7 @@ double HelperFunctions::computeDistance(const geometry_msgs::Point &p1,
   return 0.0;
 }
 /**
- *   @brief function to compute gradient between two pairs of points
+ *   @brief unction to compute gradient between two pairs of points in
  *
  *   @param two pairs of 2D points
  *   @return double value of distance between two pairs of points
