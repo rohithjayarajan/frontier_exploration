@@ -1,4 +1,4 @@
-# Frontier Exploration
+# Frontier Exploration to Check Travis status
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Build Status](https://travis-ci.org/rohithjayarajan/frontier_exploration.svg?branch=master)](https://travis-ci.org/rohithjayarajan/frontier_exploration)
 [![Coverage Status](https://coveralls.io/repos/github/rohithjayarajan/frontier_exploration/badge.svg?branch=master)](https://coveralls.io/github/rohithjayarajan/frontier_exploration?branch=master)
