@@ -18,6 +18,7 @@
  *
  */
 #include "map_structure.hpp"
+// C++ system header
 #include <cstdint>
 #include <utility>
 

@@ -20,12 +20,16 @@
 #ifndef INCLUDE_FRONTIER_EXPLORATION_OCCUPANCY_MAP_HPP_
 #define INCLUDE_FRONTIER_EXPLORATION_OCCUPANCY_MAP_HPP_
 
-#include <geometry_msgs/PoseStamped.h>
-#include <boost/range/irange.hpp>
+// C++ system header
 #include <cstdint>
 #include <utility>
 #include <vector>
+// BOOST header
+#include <boost/range/irange.hpp>
+// user defined headers
 #include "map_structure.hpp"
+// ROS Headers
+#include "geometry_msgs/PoseStamped.h"
 #include "nav_msgs/OccupancyGrid.h"
 /**
  * @brief the declaration of OccupancyMap class
@@ -134,7 +138,7 @@ class OccupancyMap {
    * type double
    */
   std::pair<double, double> getFrontierCentroid(
-      std::vector<std::pair<double, double>> &frontierCentersGrid);
+      const std::vector<std::pair<double, double>> &frontierCentersGrid);
   /**
    *   @brief function to convert grid coordinates to world coordinates
    *
@@ -142,7 +146,7 @@ class OccupancyMap {
    *   @return vector of frontier points in world coordinates
    */
   std::vector<std::pair<double, double>> grid2world(
-      std::vector<std::pair<uint32_t, uint32_t>> &frontierCentersGrid);
+      const std::vector<std::pair<uint32_t, uint32_t>> &frontierCentersGrid);
   /**
    *   @brief function to get frontiers of the map
    *

@@ -17,13 +17,17 @@
  *  source file which contains the defintion of OccupancyMap class
  *
  */
-#include "occupancy_map.hpp"
-#include <geometry_msgs/PoseStamped.h>
-#include <boost/range/irange.hpp>
+// C++ system header
 #include <cstdint>
 #include <utility>
 #include <vector>
+// BOOST header
+#include <boost/range/irange.hpp>
+// user defined headers
 #include "map_structure.hpp"
+#include "occupancy_map.hpp"
+// ROS headers
+#include "geometry_msgs/PoseStamped.h"
 #include "nav_msgs/OccupancyGrid.h"
 #include "ros/ros.h"
 
@@ -217,7 +221,7 @@ int OccupancyMap::classifyFrontiers() {
 }
 
 std::pair<double, double> OccupancyMap::getFrontierCentroid(
-    std::vector<std::pair<double, double>> &frontierCentersGrid) {
+    const std::vector<std::pair<double, double>> &frontierCentersGrid) {
   // intialize variable to compute sum of X coordinates
   double sumWorldX = 0;
   // intialize variable to compute sum of Y coordinates
@@ -235,7 +239,7 @@ std::pair<double, double> OccupancyMap::getFrontierCentroid(
 }
 
 std::vector<std::pair<double, double>> OccupancyMap::grid2world(
-    std::vector<std::pair<uint32_t, uint32_t>> &frontierCentersGrid) {
+    const std::vector<std::pair<uint32_t, uint32_t>> &frontierCentersGrid) {
   // decalare variable which is to be returned, the map cell values in world
   // coordinates
   std::vector<std::pair<double, double>> frontierCentersWorld;

@@ -21,24 +21,23 @@
 
 #ifndef INCLUDE_FRONTIER_EXPLORATION_FRONTIER_EXPLORATION_NODE_HPP_
 #define INCLUDE_FRONTIER_EXPLORATION_FRONTIER_EXPLORATION_NODE_HPP_
-// C++ header
+// C++ system header
 #include <cstdint>
 #include <utility>
 #include <vector>
+// BOOST header
+#include <boost/range/irange.hpp>
+// user defined header
 #include "occupancy_map.hpp"
 // ROS header
-#include <actionlib/client/simple_action_client.h>
-#include <geometry_msgs/PoseStamped.h>
-#include <move_base_msgs/MoveBaseAction.h>
-#include <tf/transform_listener.h>
-#include <visualization_msgs/Marker.h>
-#include <visualization_msgs/MarkerArray.h>
-#include <boost/range/irange.hpp>
+#include "actionlib/client/simple_action_client.h"
+#include "geometry_msgs/PoseStamped.h"
 #include "geometry_msgs/Twist.h"
+#include "move_base_msgs/MoveBaseAction.h"
 #include "nav_msgs/OccupancyGrid.h"
 #include "nav_msgs/Odometry.h"
 #include "ros/ros.h"
-#include "sensor_msgs/LaserScan.h"
+#include "tf/transform_listener.h"
 
 /**
  * @brief the declaration of FrontierExplore class
