@@ -7,104 +7,56 @@
 /**
  *  @file    frontier_exploration_node.cpp
  *  @author  rohithjayarajan
- *  @date 12/2/2018
- *  @version 0.1
+ *  @date 14/2/2018
+ *  @version 1.1
  *
  *  @brief source file for FrontierExplore class
  *
  *  @section DESCRIPTION
  *
- *  header file which contains the defintion of FrontierExplore
+ *  source file which contains the defintion of FrontierExplore
  * class
  *
  */
 #include "frontier_exploration_node.hpp"
-/**
- *   @brief Default constructor for FrontierExplore
- *
- *   @param nothing
- *   @return nothing
- */
+// C++ header
+#include <cstdint>
+#include <utility>
+#include <vector>
+#include "occupancy_map.hpp"
+// ROS header
+#include <actionlib/client/simple_action_client.h>
+#include <geometry_msgs/PoseStamped.h>
+#include <move_base_msgs/MoveBaseAction.h>
+#include <tf/transform_listener.h>
+#include <visualization_msgs/Marker.h>
+#include <visualization_msgs/MarkerArray.h>
+#include <boost/range/irange.hpp>
+#include "geometry_msgs/Twist.h"
+#include "nav_msgs/OccupancyGrid.h"
+#include "nav_msgs/Odometry.h"
+#include "ros/ros.h"
+#include "sensor_msgs/LaserScan.h"
+
 FrontierExplore::FrontierExplore() {}
-/**
- *   @brief Default destructor for FrontierExplore
- *
- *   @param nothing
- *   @return nothing
- */
+
 FrontierExplore::~FrontierExplore() {}
-/**
- *   @brief callback function for to monitor collision threat based on laser
- * scan messages
- *
- *   @param boost shared pointer to sensor_msgs::LaserScan
- *   @return nothing
- */
-void FrontierExplore::laserScanCallback(
-    const sensor_msgs::LaserScan::ConstPtr &msg) {}
-/**
- *   @brief function to read the occupancy grid
- *
- *   @param nothing
- *   @return nothing
- */
-void FrontierExplore::readOccupancyGrid(
-    const nav_msgs::OccupancyGrid::ConstPtr &grid_msg) {}
-/**
- *   @brief function to check if the point is a frontier point
- *
- *   @param int values of index
- *   @return boolean value
- */
-bool FrontierExplore::isFrontier(const int &x_, const int &y_) { return true; }
-/**
- *   @brief function to get frontier points
- *
- *   @param nothing
- *   @return nothing
- */
-void FrontierExplore::getFrontiersPoints() {}
-/**
- *   @brief function to group frontiers
- *
- *   @param nothing
- *   @return nothing
- */
-void FrontierExplore::classifyFrontiers() {}
-/**
- *   @brief function to get frontiers of the map
- *
- *   @param nothing
- *   @return nothing
- */
-void FrontierExplore::detectFrontiers() {}
-/**
- *   @brief function to get robot pose
- *
- *   @param boost shared pointer to nav_msgs::Odometry
- *   @return nothing
- */
-void FrontierExplore::updateRobotPose(
-    const nav_msgs::Odometry::ConstPtr &odom_msg) {}
-/**
- *   @brief function to get goal pose from frontiers
- *
- *   @param nothing
- *   @return nothing
- */
-void FrontierExplore::updateGoalPose() {}
-/**
- *   @brief function to rotate the turtlebot by a value (in degrees) at a
- * fixed point
- *
- *   @param angle to rotate by (in degrees
- *   @return nothing
- */
-void FrontierExplore::rotate(const double &angleToRotate) {}
-/**
- *   @brief function to execute frontier exploaration task
- *
- *   @param nothing
- *   @return nothing
- */
-void FrontierExplore::startExploration() {}
+
+bool FrontierExplore::updateMap(
+    const nav_msgs::OccupancyGrid::ConstPtr &grid_msg) {
+  return true;
+}
+
+bool FrontierExplore::updateRobotPose() { return true; }
+
+bool FrontierExplore::updateGoalPose() { return true; }
+
+bool FrontierExplore::rotate() { return true; }
+
+std::pair<double, double> FrontierExplore::findNearestFrontier(
+    const std::vector<std::pair<double, double>> &frontierCentroidWorldSet) {
+  std::pair<double, double> a;
+  return a;
+}
+
+bool FrontierExplore::startExploration() { return true; }

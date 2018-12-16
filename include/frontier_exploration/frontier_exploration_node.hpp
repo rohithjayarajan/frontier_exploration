@@ -7,8 +7,8 @@
 /**
  *  @file    frontier_exploration_node.hpp
  *  @author  rohithjayarajan
- *  @date 12/2/2018
- *  @version 0.1
+ *  @date 14/2/2018
+ *  @version 1.1
  *
  *  @brief header file for FrontierExplore class
  *
@@ -22,15 +22,19 @@
 #ifndef INCLUDE_FRONTIER_EXPLORATION_FRONTIER_EXPLORATION_NODE_HPP_
 #define INCLUDE_FRONTIER_EXPLORATION_FRONTIER_EXPLORATION_NODE_HPP_
 // C++ header
-// #include <cmath>
-// #include <sstream>
-// #include <string>
-// #include <boost/range/irange.hpp>
+#include <cstdint>
 #include <utility>
 #include <vector>
+#include "occupancy_map.hpp"
 // ROS header
+#include <actionlib/client/simple_action_client.h>
+#include <geometry_msgs/PoseStamped.h>
+#include <move_base_msgs/MoveBaseAction.h>
+#include <tf/transform_listener.h>
+#include <visualization_msgs/Marker.h>
+#include <visualization_msgs/MarkerArray.h>
+#include <boost/range/irange.hpp>
 #include "geometry_msgs/Twist.h"
-#include "map_structure.hpp"
 #include "nav_msgs/OccupancyGrid.h"
 #include "nav_msgs/Odometry.h"
 #include "ros/ros.h"
@@ -51,8 +55,6 @@ class FrontierExplore {
   ros::NodeHandle nh;
   // declare variable to hold message to be published
   geometry_msgs::Twist twistMsg_;
-  // create subscriber for laserscan topic messages
-  ros::Subscriber laserScan_;
   // create subscriber for MAP topic messages
   ros::Subscriber map_;
   // create subscriber for odom topic messages
@@ -61,24 +63,24 @@ class FrontierExplore {
   ros::Publisher vel_;
   // declare variable to hold fixed value of angular velocity(degrees/sec)
   double angularVelZ_;
-  // declare variable to hold distance threshold for a collision threat
-  double minDist_;
-  // declare variable to check if collision threat exists
-  bool isCollision_;
   // declare variable which tells closest distance to potential collision
   double collisionDist_;
   // declare variable to set publishing rate
   double frequency_;
   // queue holding the frontier points
   std::vector<std::pair<int, int>> frontierCenter;
-  // data structure containing the occupancy grid map
-  std::vector<std::vector<MapStructure>> occupancyMap;
+  // listener for robot pose
+  tf::TransformListener robotPose_;
   // data structure for holding robot pose
-  geometry_msgs::Pose robotPose;
+  tf::StampedTransform robotPose;
   // data structure for holding goal pose
   geometry_msgs::PoseStamped goalPose;
+  // occupancy grid map of the environment
+  OccupancyMap environmentMap;
   // variable to check if map is loaded
   bool isMapLoaded;
+  // list of points not allowed to go to
+  std::vector<std::pair<double, double>> invalidPoints;
 
  public:
   /**
@@ -96,77 +98,50 @@ class FrontierExplore {
    */
   ~FrontierExplore();
   /**
-   *   @brief callback function for to monitor collision threat based on laser
-   * scan messages
+   *   @brief callback function for to update occupancy map based on map
+   * messages
    *
-   *   @param boost shared pointer to sensor_msgs::LaserScan
-   *   @return nothing
+   *   @param boost shared pointer to nav_msgs::OccupancyGrid
+   *   @return boolean true on successful completion
    */
-  void laserScanCallback(const sensor_msgs::LaserScan::ConstPtr &msg);
-  /**
-   *   @brief function to read the occupancy grid
-   *
-   *   @param nothing
-   *   @return nothing
-   */
-  void readOccupancyGrid(const nav_msgs::OccupancyGrid::ConstPtr &grid_msg);
-  /**
-   *   @brief function to check if the point is a frontier point
-   *
-   *   @param int values of index
-   *   @return boolean value
-   */
-  bool isFrontier(const int &x_, const int &y_);
-  /**
-   *   @brief function to get frontier points
-   *
-   *   @param nothing
-   *   @return nothing
-   */
-  void getFrontiersPoints();
-  /**
-   *   @brief function to group frontiers
-   *
-   *   @param nothing
-   *   @return nothing
-   */
-  void classifyFrontiers();
-  /**
-   *   @brief function to get frontiers of the map
-   *
-   *   @param nothing
-   *   @return nothing
-   */
-  void detectFrontiers();
+  bool updateMap(const nav_msgs::OccupancyGrid::ConstPtr &grid_msg);
   /**
    *   @brief function to get robot pose
    *
-   *   @param boost shared pointer to nav_msgs::Odometry
-   *   @return nothing
+   *   @param nothing
+   *   @return boolean true on successful completion
    */
-  void updateRobotPose(const nav_msgs::Odometry::ConstPtr &odom_msg);
+  bool updateRobotPose();
   /**
    *   @brief function to get goal pose from frontiers
    *
    *   @param nothing
-   *   @return nothing
+   *   @return boolean true on successful completion
    */
-  void updateGoalPose();
+  bool updateGoalPose();
   /**
    *   @brief function to rotate the turtlebot by a value (in degrees) at a
    * fixed point
    *
-   *   @param angle to rotate by (in degrees
-   *   @return nothing
+   *   @param angle to rotate by (in degrees)
+   *   @return boolean true on successful completion
    */
-  void rotate(const double &angleToRotate);
+  bool rotate();
+  /**
+   *   @brief function to find closest frontier to the robot
+   *
+   *   @param the vector containing collection of frontier centroids
+   *   @return the closest frontier to the robot
+   */
+  std::pair<double, double> findNearestFrontier(
+      const std::vector<std::pair<double, double>> &frontierCentroidWorldSet);
   /**
    *   @brief function to execute frontier exploaration task
    *
    *   @param nothing
-   *   @return nothing
+   *   @return boolean true on successful completion
    */
-  void startExploration();
+  bool startExploration();
 };
 
 #endif  // INCLUDE_FRONTIER_EXPLORATION_FRONTIER_EXPLORATION_NODE_HPP_
