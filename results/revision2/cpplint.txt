@@ -1,0 +1,10 @@
+Done processing ./src/frontier_exploration/test/map_structure_test.cpp
+Done processing ./src/frontier_exploration/test/helper_functions_test.cpp
+Done processing ./src/frontier_exploration/test/main.cpp
+Done processing ./src/frontier_exploration/include/frontier_exploration/occupancy_map.hpp
+Done processing ./src/frontier_exploration/include/frontier_exploration/frontier_exploration_node.hpp
+Done processing ./src/frontier_exploration/include/frontier_exploration/map_structure.hpp
+Done processing ./src/frontier_exploration/src/frontier_exploration_node.cpp
+Done processing ./src/frontier_exploration/src/occupancy_map.cpp
+Done processing ./src/frontier_exploration/src/main.cpp
+Done processing ./src/frontier_exploration/src/map_structure.cpp
