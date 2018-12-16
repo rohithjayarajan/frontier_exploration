@@ -102,9 +102,9 @@ class FrontierExplore {
    * messages
    *
    *   @param boost shared pointer to nav_msgs::OccupancyGrid
-   *   @return boolean true on successful completion
+   *   @return nothing
    */
-  bool updateMap(const nav_msgs::OccupancyGrid::ConstPtr &grid_msg);
+  void updateMap(const nav_msgs::OccupancyGrid::ConstPtr &grid_msg);
   /**
    *   @brief function to get robot pose
    *
@@ -112,13 +112,6 @@ class FrontierExplore {
    *   @return boolean true on successful completion
    */
   bool updateRobotPose();
-  /**
-   *   @brief function to get goal pose from frontiers
-   *
-   *   @param nothing
-   *   @return boolean true on successful completion
-   */
-  bool updateGoalPose();
   /**
    *   @brief function to rotate the turtlebot by a value (in degrees) at a
    * fixed point
