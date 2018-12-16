@@ -12,6 +12,10 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   std_msgs
   nav_msgs
+  actionlib
+  actionlib_msgs
+  move_base_msgs
+  tf
 )
 
 ## System dependencies are found with CMake's conventions
@@ -134,7 +138,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(${PROJECT_NAME}_node src/main.cpp src/frontier_exploration_node.cpp src/map_structure.cpp src/helper_functions.cpp)
+add_executable(${PROJECT_NAME}_node src/main.cpp src/frontier_exploration_node.cpp src/map_structure.cpp src/occupancy_map.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
