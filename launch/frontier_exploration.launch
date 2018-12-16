@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <include file="$(find turtlebot_navigation)/launch/gmapping_demo.launch"/>
+  
+  <!-- frontier_exploratoin Node -->
+  <node 
+  name = "frontier_exploration_node"
+  type = "frontier_exploration_node"
+  pkg = "frontier_exploration"
+  output = "screen"
+  />
+
+</launch>
