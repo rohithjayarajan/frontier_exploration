@@ -126,8 +126,8 @@ void FrontierExplore::updateMap(
 bool FrontierExplore::updateRobotPose() {
   try {
     robotPose_.lookupTransform("/map", "/base_link", ros::Time(0), robotPose);
-  } catch (tf::TransformException ex) {
-    ROS_ERROR("%s", ex.what());
+  } catch (tf::LookupException &e) {
+    ROS_ERROR("%s", e.what());
     ros::Duration(3.0).sleep();
   }
   // return true on successful completion of function
