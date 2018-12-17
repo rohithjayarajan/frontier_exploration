@@ -180,7 +180,46 @@ rosrun rqt_logger_level rqt_logger_level
 
 ## Running Rostest
 
-//TODO(rohithjayarajan) add ROS test instructions after baseline build
+## Running Rostest
+
+Rostest and gtest have been used to write the unit tests for the talker node service. Run the following commands in a new terminal to build the tests
+
+```
+cd ~/catkin_ws/
+source devel/setup.bash
+catkin_make run_tests_frontier_exploration
+```
+
+An output similar to the below is produced on following the above command:
+
+```
+[ROSTEST]-----------------------------------------------------------------------
+
+[frontier_exploration.rosunit-frontier_exploration_tests/testPubIsOkay][passed]
+[frontier_exploration.rosunit-frontier_exploration_tests/testMapIsOkay][passed]
+[frontier_exploration.rosunit-frontier_exploration_tests/testUpdateRobotPose][passed]
+[frontier_exploration.rosunit-frontier_exploration_tests/testRotate][passed]
+[frontier_exploration.rosunit-frontier_exploration_tests/getSetIsOnFrontier][passed]
+[frontier_exploration.rosunit-frontier_exploration_tests/getSetfrontierClass][passed]
+[frontier_exploration.rosunit-frontier_exploration_tests/getSetMapXYCoordinate][passed]
+[frontier_exploration.rosunit-frontier_exploration_tests/getSetMapData][passed]
+[frontier_exploration.rosunit-frontier_exploration_tests/getSetMapReslution][passed]
+[frontier_exploration.rosunit-frontier_exploration_tests/getSetMapHeight][passed]
+[frontier_exploration.rosunit-frontier_exploration_tests/getSetMapWidth][passed]
+[frontier_exploration.rosunit-frontier_exploration_tests/getSetMapOigin][passed]
+[frontier_exploration.rosunit-frontier_exploration_tests/testIsFrontier][passed]
+[frontier_exploration.rosunit-frontier_exploration_tests/testClassifyFrontiers][passed]
+[frontier_exploration.rosunit-frontier_exploration_tests/testFrontierCentroid][passed]
+[frontier_exploration.rosunit-frontier_exploration_tests/testGrid2world][passed]
+[frontier_exploration.rosunit-frontier_exploration_tests/testDetectFrontiersCenterWorld][passed]
+[frontier_exploration.rosunit-frontier_exploration_tests/testReadOccupancyGrid][passed]
+
+SUMMARY
+ * RESULT: SUCCESS
+ * TESTS: 18
+ * ERRORS: 0
+ * FAILURES: 0
+```
 
 ## Building for Code Coverage
 ```
@@ -190,6 +229,9 @@ make
 make code_coverage
 ```
 This generates a index.html page in the build/coverage sub-directory that can be viewed locally in a web browser.
+
+Running locally, the follwing result is obtained:
+![alt text](https://github.com/rohithjayarajan/frontier_exploration/blob/master/results/revision2/coverage.png)
 
 ## Doxygen Documentation
 
