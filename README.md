@@ -180,8 +180,6 @@ rosrun rqt_logger_level rqt_logger_level
 
 ## Running Rostest
 
-## Running Rostest
-
 Rostest and gtest have been used to write the unit tests for the talker node service. Run the following commands in a new terminal to build the tests
 
 ```
