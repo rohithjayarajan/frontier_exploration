@@ -17,14 +17,14 @@
  *  source file which contains tests for MapStructure class
  */
 #include "frontier_exploration_node.hpp"
+// gtest header
+#include <gtest/gtest.h>
 // C++ system header
 #include <cstdint>
 #include <utility>
 #include <vector>
 // BOOST header
 #include <boost/range/irange.hpp>
-// gtest header
-#include <gtest/gtest.h>
 // user defined header
 #include "occupancy_map.hpp"
 // ROS header

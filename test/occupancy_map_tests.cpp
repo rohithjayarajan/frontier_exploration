@@ -16,14 +16,14 @@
  *
  *  source file which contains tests for OccupancyMap class
  */
+// gtest header
+#include <gtest/gtest.h>
 // C++ system header
 #include <cstdint>
 #include <utility>
 #include <vector>
 // BOOST header
 #include <boost/range/irange.hpp>
-// gtest header
-#include <gtest/gtest.h>
 // user defined headers
 #include "map_structure.hpp"
 #include "occupancy_map.hpp"
