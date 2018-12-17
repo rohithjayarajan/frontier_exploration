@@ -17,8 +17,11 @@ be followed throughout the course of the project as it is being built by a singl
 
 [Sprint Planning Notes for the Project][reference-id-for-SIP-planning-notes]
 
+[Presentation Slides for the Project][reference-id-for-ppt]
+
 [reference-id-for-log-details]: https://docs.google.com/spreadsheets/d/1UNbX6C1j1Hg_Kum1Vs86YjXetcIUCho0L21Nnyfcikk/edit?usp=sharing
 [reference-id-for-SIP-planning-notes]: https://docs.google.com/document/d/1JhXZGQyf6TzoRhE24SGvOkqI1fCqavrlQTYm3uAaZm8/edit?usp=sharing
+[reference-id-for-ppt]: https://docs.google.com/presentation/d/1-oxa_dVyRKhQ15pwvrmVlU6Bpb2wde8cZan42DYR5Ts/edit?usp=sharing
 
 ## Dependencies
 
