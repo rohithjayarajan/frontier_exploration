@@ -1,0 +1,142 @@
+\hypertarget{frontier__exploration__node__tests_8cpp}{}\section{/home/rohith/1808push/src/frontier\+\_\+exploration/test/frontier\+\_\+exploration\+\_\+node\+\_\+tests.cpp File Reference}
+\label{frontier__exploration__node__tests_8cpp}\index{/home/rohith/1808push/src/frontier\+\_\+exploration/test/frontier\+\_\+exploration\+\_\+node\+\_\+tests.\+cpp@{/home/rohith/1808push/src/frontier\+\_\+exploration/test/frontier\+\_\+exploration\+\_\+node\+\_\+tests.\+cpp}}
+
+
+source file for testing Map\+Structure class  
+
+
+{\ttfamily \#include \char`\"{}frontier\+\_\+exploration\+\_\+node.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\\*
+{\ttfamily \#include $<$cstdint$>$}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$boost/range/irange.\+hpp$>$}\\*
+{\ttfamily \#include \char`\"{}occupancy\+\_\+map.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}actionlib/client/simple\+\_\+action\+\_\+client.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\+\_\+msgs/\+Pose\+Stamped.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\+\_\+msgs/\+Twist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}move\+\_\+base\+\_\+msgs/\+Move\+Base\+Action.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}nav\+\_\+msgs/\+Occupancy\+Grid.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}nav\+\_\+msgs/\+Odometry.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}tf/transform\+\_\+listener.\+h\char`\"{}}\\*
+Include dependency graph for frontier\+\_\+exploration\+\_\+node\+\_\+tests.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{frontier__exploration__node__tests_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classPublisherTests}{Publisher\+Tests}
+\begin{DoxyCompactList}\small\item\em class \hyperlink{classPublisherTests}{Publisher\+Tests} used for testing publisher \end{DoxyCompactList}\item 
+class \hyperlink{classFrontierExploreTests}{Frontier\+Explore\+Tests}
+\begin{DoxyCompactList}\small\item\em class \hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests} used for setup and teardown for all the tests \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{frontier__exploration__node__tests_8cpp_a7b3d1d08f7e936f957443259989e107f}{T\+E\+S\+T\+\_\+F} (\hyperlink{classFrontierExploreTests}{Frontier\+Explore\+Tests}, test\+Pub\+Is\+Okay)
+\begin{DoxyCompactList}\small\item\em test function to test publisher for velocity \end{DoxyCompactList}\item 
+\hyperlink{frontier__exploration__node__tests_8cpp_af87d07d48ee993f2d6be8bcc4215c3cc}{T\+E\+S\+T\+\_\+F} (\hyperlink{classFrontierExploreTests}{Frontier\+Explore\+Tests}, test\+Map\+Is\+Okay)
+\begin{DoxyCompactList}\small\item\em test function to test /map subscription \end{DoxyCompactList}\item 
+\hyperlink{frontier__exploration__node__tests_8cpp_a3ed47aec16cf5497b4175f472e110c0b}{T\+E\+S\+T\+\_\+F} (\hyperlink{classFrontierExploreTests}{Frontier\+Explore\+Tests}, test\+Update\+Robot\+Pose)
+\begin{DoxyCompactList}\small\item\em test function to test update\+Robot\+Pose method \end{DoxyCompactList}\item 
+\hyperlink{frontier__exploration__node__tests_8cpp_a3cda1e232e89bfe191fc93c64dae313e}{T\+E\+S\+T\+\_\+F} (\hyperlink{classFrontierExploreTests}{Frontier\+Explore\+Tests}, test\+Rotate)
+\begin{DoxyCompactList}\small\item\em test function to test rotate method \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+source file for testing Map\+Structure class 
+
+\begin{DoxyAuthor}{Author}
+rohithjayarajan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+12/15/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+1
+\end{DoxyVersion}
+\hypertarget{occupancy__map__tests_8cpp_DESCRIPTION}{}\subsection{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}\label{occupancy__map__tests_8cpp_DESCRIPTION}
+source file which contains tests for Map\+Structure class 
+
+\subsection{Function Documentation}
+\index{frontier\+\_\+exploration\+\_\+node\+\_\+tests.\+cpp@{frontier\+\_\+exploration\+\_\+node\+\_\+tests.\+cpp}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!frontier\+\_\+exploration\+\_\+node\+\_\+tests.\+cpp@{frontier\+\_\+exploration\+\_\+node\+\_\+tests.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Frontier\+Explore\+Tests, test\+Pub\+Is\+Okay)}{TEST_F(FrontierExploreTests, testPubIsOkay)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Frontier\+Explore\+Tests}}]{, }
+\item[{test\+Pub\+Is\+Okay}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{frontier__exploration__node__tests_8cpp_a7b3d1d08f7e936f957443259989e107f}{}\label{frontier__exploration__node__tests_8cpp_a7b3d1d08f7e936f957443259989e107f}
+
+
+test function to test publisher for velocity 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classFrontierExploreTests}{Frontier\+Explore\+Tests},the} & gtest framework \\
+\hline
+{\em test\+Pub\+Is\+Okay,the} & name of test \\
+\hline
+\end{DoxyParams}
+\index{frontier\+\_\+exploration\+\_\+node\+\_\+tests.\+cpp@{frontier\+\_\+exploration\+\_\+node\+\_\+tests.\+cpp}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!frontier\+\_\+exploration\+\_\+node\+\_\+tests.\+cpp@{frontier\+\_\+exploration\+\_\+node\+\_\+tests.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Frontier\+Explore\+Tests, test\+Map\+Is\+Okay)}{TEST_F(FrontierExploreTests, testMapIsOkay)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Frontier\+Explore\+Tests}}]{, }
+\item[{test\+Map\+Is\+Okay}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{frontier__exploration__node__tests_8cpp_af87d07d48ee993f2d6be8bcc4215c3cc}{}\label{frontier__exploration__node__tests_8cpp_af87d07d48ee993f2d6be8bcc4215c3cc}
+
+
+test function to test /map subscription 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classFrontierExploreTests}{Frontier\+Explore\+Tests},the} & gtest framework \\
+\hline
+{\em test\+Map\+Is\+Okay,the} & name of test \\
+\hline
+\end{DoxyParams}
+\index{frontier\+\_\+exploration\+\_\+node\+\_\+tests.\+cpp@{frontier\+\_\+exploration\+\_\+node\+\_\+tests.\+cpp}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!frontier\+\_\+exploration\+\_\+node\+\_\+tests.\+cpp@{frontier\+\_\+exploration\+\_\+node\+\_\+tests.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Frontier\+Explore\+Tests, test\+Update\+Robot\+Pose)}{TEST_F(FrontierExploreTests, testUpdateRobotPose)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Frontier\+Explore\+Tests}}]{, }
+\item[{test\+Update\+Robot\+Pose}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{frontier__exploration__node__tests_8cpp_a3ed47aec16cf5497b4175f472e110c0b}{}\label{frontier__exploration__node__tests_8cpp_a3ed47aec16cf5497b4175f472e110c0b}
+
+
+test function to test update\+Robot\+Pose method 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classFrontierExploreTests}{Frontier\+Explore\+Tests},the} & gtest framework \\
+\hline
+{\em test\+Update\+Robot\+Pose,the} & name of test \\
+\hline
+\end{DoxyParams}
+\index{frontier\+\_\+exploration\+\_\+node\+\_\+tests.\+cpp@{frontier\+\_\+exploration\+\_\+node\+\_\+tests.\+cpp}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!frontier\+\_\+exploration\+\_\+node\+\_\+tests.\+cpp@{frontier\+\_\+exploration\+\_\+node\+\_\+tests.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Frontier\+Explore\+Tests, test\+Rotate)}{TEST_F(FrontierExploreTests, testRotate)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Frontier\+Explore\+Tests}}]{, }
+\item[{test\+Rotate}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{frontier__exploration__node__tests_8cpp_a3cda1e232e89bfe191fc93c64dae313e}{}\label{frontier__exploration__node__tests_8cpp_a3cda1e232e89bfe191fc93c64dae313e}
+
+
+test function to test rotate method 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classFrontierExploreTests}{Frontier\+Explore\+Tests},the} & gtest framework \\
+\hline
+{\em test\+Rotate,the} & name of test \\
+\hline
+\end{DoxyParams}

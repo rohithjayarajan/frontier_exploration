@@ -1,0 +1,261 @@
+\hypertarget{occupancy__map__tests_8cpp}{}\section{/home/rohith/1808push/src/frontier\+\_\+exploration/test/occupancy\+\_\+map\+\_\+tests.cpp File Reference}
+\label{occupancy__map__tests_8cpp}\index{/home/rohith/1808push/src/frontier\+\_\+exploration/test/occupancy\+\_\+map\+\_\+tests.\+cpp@{/home/rohith/1808push/src/frontier\+\_\+exploration/test/occupancy\+\_\+map\+\_\+tests.\+cpp}}
+
+
+source file for testing Occupancy\+Map class  
+
+
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\\*
+{\ttfamily \#include $<$cstdint$>$}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$boost/range/irange.\+hpp$>$}\\*
+{\ttfamily \#include \char`\"{}map\+\_\+structure.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}occupancy\+\_\+map.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\+\_\+msgs/\+Pose\+Stamped.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}nav\+\_\+msgs/\+Occupancy\+Grid.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\\*
+Include dependency graph for occupancy\+\_\+map\+\_\+tests.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{occupancy__map__tests_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests}
+\begin{DoxyCompactList}\small\item\em class \hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests} used for setup and teardown for all the tests \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{occupancy__map__tests_8cpp_aaed26bc70cef776c08924a0c46de2e21}{T\+E\+S\+T\+\_\+F} (\hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests}, get\+Set\+Map\+Reslution)
+\begin{DoxyCompactList}\small\item\em test function to test resolution variable getter \& setter method Occupancy\+Map class \end{DoxyCompactList}\item 
+\hyperlink{occupancy__map__tests_8cpp_a8b9696cd259bde480c72d50817d674b1}{T\+E\+S\+T\+\_\+F} (\hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests}, get\+Set\+Map\+Height)
+\begin{DoxyCompactList}\small\item\em test function to test height variable getter \& setter method Occupancy\+Map class \end{DoxyCompactList}\item 
+\hyperlink{occupancy__map__tests_8cpp_a8a26fe87f9433f839ec8b9b59dcb34fd}{T\+E\+S\+T\+\_\+F} (\hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests}, get\+Set\+Map\+Width)
+\begin{DoxyCompactList}\small\item\em test function to test width variable getter \& setter method Occupancy\+Map class \end{DoxyCompactList}\item 
+\hyperlink{occupancy__map__tests_8cpp_a00b1a37310df622280211e7b865f9609}{T\+E\+S\+T\+\_\+F} (\hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests}, get\+Set\+Map\+Oigin)
+\begin{DoxyCompactList}\small\item\em test function to test origin variable getter \& setter method Occupancy\+Map class \end{DoxyCompactList}\item 
+\hyperlink{occupancy__map__tests_8cpp_a78aa146a5cfad52fb0dc750000125731}{T\+E\+S\+T\+\_\+F} (\hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests}, test\+Is\+Frontier)
+\begin{DoxyCompactList}\small\item\em test function to test is\+Frontier method Occupancy\+Map class \end{DoxyCompactList}\item 
+\hyperlink{occupancy__map__tests_8cpp_a1029ad624defc57a8207a45aa2eb2f0d}{T\+E\+S\+T\+\_\+F} (\hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests}, test\+Classify\+Frontiers)
+\begin{DoxyCompactList}\small\item\em test function to test classify\+Frontiers method Occupancy\+Map class \end{DoxyCompactList}\item 
+\hyperlink{occupancy__map__tests_8cpp_ae5e3fb60e709e757f1211026c5c95e58}{T\+E\+S\+T\+\_\+F} (\hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests}, test\+Frontier\+Centroid)
+\begin{DoxyCompactList}\small\item\em test function to test get\+Frontier\+Centroid method Occupancy\+Map class \end{DoxyCompactList}\item 
+\hyperlink{occupancy__map__tests_8cpp_a1544a2a9ceeb62fd58dd8ce9d3eba540}{T\+E\+S\+T\+\_\+F} (\hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests}, test\+Grid2world)
+\begin{DoxyCompactList}\small\item\em test function to test grid2world method Occupancy\+Map class \end{DoxyCompactList}\item 
+\hyperlink{occupancy__map__tests_8cpp_a5188f97411144d62e660933c0b310b3d}{T\+E\+S\+T\+\_\+F} (\hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests}, test\+Detect\+Frontiers\+Center\+World)
+\begin{DoxyCompactList}\small\item\em test function to test detect\+Frontiers\+Center\+World method Occupancy\+Map class \end{DoxyCompactList}\item 
+\hyperlink{occupancy__map__tests_8cpp_ab5ac6991e479b745caec21f6f267c2b7}{T\+E\+S\+T\+\_\+F} (\hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests}, test\+Read\+Occupancy\+Grid)
+\begin{DoxyCompactList}\small\item\em test function to test read\+Occupancy\+Grid method Occupancy\+Map class \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+source file for testing Occupancy\+Map class 
+
+\begin{DoxyAuthor}{Author}
+rohithjayarajan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+12/15/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+1
+\end{DoxyVersion}
+\hypertarget{occupancy__map__tests_8cpp_DESCRIPTION}{}\subsection{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}\label{occupancy__map__tests_8cpp_DESCRIPTION}
+source file which contains tests for Occupancy\+Map class 
+
+\subsection{Function Documentation}
+\index{occupancy\+\_\+map\+\_\+tests.\+cpp@{occupancy\+\_\+map\+\_\+tests.\+cpp}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!occupancy\+\_\+map\+\_\+tests.\+cpp@{occupancy\+\_\+map\+\_\+tests.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Occupancy\+Map\+Tests, get\+Set\+Map\+Reslution)}{TEST_F(OccupancyMapTests, getSetMapReslution)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Occupancy\+Map\+Tests}}]{, }
+\item[{get\+Set\+Map\+Reslution}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{occupancy__map__tests_8cpp_aaed26bc70cef776c08924a0c46de2e21}{}\label{occupancy__map__tests_8cpp_aaed26bc70cef776c08924a0c46de2e21}
+
+
+test function to test resolution variable getter \& setter method Occupancy\+Map class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests},the} & gtest framework \\
+\hline
+{\em get\+Set\+Map\+Reslution,the} & name of test \\
+\hline
+\end{DoxyParams}
+\index{occupancy\+\_\+map\+\_\+tests.\+cpp@{occupancy\+\_\+map\+\_\+tests.\+cpp}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!occupancy\+\_\+map\+\_\+tests.\+cpp@{occupancy\+\_\+map\+\_\+tests.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Occupancy\+Map\+Tests, get\+Set\+Map\+Height)}{TEST_F(OccupancyMapTests, getSetMapHeight)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Occupancy\+Map\+Tests}}]{, }
+\item[{get\+Set\+Map\+Height}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{occupancy__map__tests_8cpp_a8b9696cd259bde480c72d50817d674b1}{}\label{occupancy__map__tests_8cpp_a8b9696cd259bde480c72d50817d674b1}
+
+
+test function to test height variable getter \& setter method Occupancy\+Map class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests},the} & gtest framework \\
+\hline
+{\em get\+Set\+Map\+Height,the} & name of test \\
+\hline
+\end{DoxyParams}
+\index{occupancy\+\_\+map\+\_\+tests.\+cpp@{occupancy\+\_\+map\+\_\+tests.\+cpp}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!occupancy\+\_\+map\+\_\+tests.\+cpp@{occupancy\+\_\+map\+\_\+tests.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Occupancy\+Map\+Tests, get\+Set\+Map\+Width)}{TEST_F(OccupancyMapTests, getSetMapWidth)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Occupancy\+Map\+Tests}}]{, }
+\item[{get\+Set\+Map\+Width}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{occupancy__map__tests_8cpp_a8a26fe87f9433f839ec8b9b59dcb34fd}{}\label{occupancy__map__tests_8cpp_a8a26fe87f9433f839ec8b9b59dcb34fd}
+
+
+test function to test width variable getter \& setter method Occupancy\+Map class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests},the} & gtest framework \\
+\hline
+{\em get\+Set\+Map\+Width,the} & name of test \\
+\hline
+\end{DoxyParams}
+\index{occupancy\+\_\+map\+\_\+tests.\+cpp@{occupancy\+\_\+map\+\_\+tests.\+cpp}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!occupancy\+\_\+map\+\_\+tests.\+cpp@{occupancy\+\_\+map\+\_\+tests.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Occupancy\+Map\+Tests, get\+Set\+Map\+Oigin)}{TEST_F(OccupancyMapTests, getSetMapOigin)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Occupancy\+Map\+Tests}}]{, }
+\item[{get\+Set\+Map\+Oigin}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{occupancy__map__tests_8cpp_a00b1a37310df622280211e7b865f9609}{}\label{occupancy__map__tests_8cpp_a00b1a37310df622280211e7b865f9609}
+
+
+test function to test origin variable getter \& setter method Occupancy\+Map class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests},the} & gtest framework \\
+\hline
+{\em get\+Set\+Map\+Metadata,the} & name of test \\
+\hline
+\end{DoxyParams}
+\index{occupancy\+\_\+map\+\_\+tests.\+cpp@{occupancy\+\_\+map\+\_\+tests.\+cpp}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!occupancy\+\_\+map\+\_\+tests.\+cpp@{occupancy\+\_\+map\+\_\+tests.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Occupancy\+Map\+Tests, test\+Is\+Frontier)}{TEST_F(OccupancyMapTests, testIsFrontier)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Occupancy\+Map\+Tests}}]{, }
+\item[{test\+Is\+Frontier}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{occupancy__map__tests_8cpp_a78aa146a5cfad52fb0dc750000125731}{}\label{occupancy__map__tests_8cpp_a78aa146a5cfad52fb0dc750000125731}
+
+
+test function to test is\+Frontier method Occupancy\+Map class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests},the} & gtest framework \\
+\hline
+{\em get\+Set\+Map\+Metadata,the} & name of test \\
+\hline
+\end{DoxyParams}
+\index{occupancy\+\_\+map\+\_\+tests.\+cpp@{occupancy\+\_\+map\+\_\+tests.\+cpp}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!occupancy\+\_\+map\+\_\+tests.\+cpp@{occupancy\+\_\+map\+\_\+tests.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Occupancy\+Map\+Tests, test\+Classify\+Frontiers)}{TEST_F(OccupancyMapTests, testClassifyFrontiers)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Occupancy\+Map\+Tests}}]{, }
+\item[{test\+Classify\+Frontiers}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{occupancy__map__tests_8cpp_a1029ad624defc57a8207a45aa2eb2f0d}{}\label{occupancy__map__tests_8cpp_a1029ad624defc57a8207a45aa2eb2f0d}
+
+
+test function to test classify\+Frontiers method Occupancy\+Map class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests},the} & gtest framework \\
+\hline
+{\em get\+Set\+Map\+Metadata,the} & name of test \\
+\hline
+\end{DoxyParams}
+\index{occupancy\+\_\+map\+\_\+tests.\+cpp@{occupancy\+\_\+map\+\_\+tests.\+cpp}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!occupancy\+\_\+map\+\_\+tests.\+cpp@{occupancy\+\_\+map\+\_\+tests.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Occupancy\+Map\+Tests, test\+Frontier\+Centroid)}{TEST_F(OccupancyMapTests, testFrontierCentroid)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Occupancy\+Map\+Tests}}]{, }
+\item[{test\+Frontier\+Centroid}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{occupancy__map__tests_8cpp_ae5e3fb60e709e757f1211026c5c95e58}{}\label{occupancy__map__tests_8cpp_ae5e3fb60e709e757f1211026c5c95e58}
+
+
+test function to test get\+Frontier\+Centroid method Occupancy\+Map class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests},the} & gtest framework \\
+\hline
+{\em get\+Set\+Map\+Metadata,the} & name of test \\
+\hline
+\end{DoxyParams}
+\index{occupancy\+\_\+map\+\_\+tests.\+cpp@{occupancy\+\_\+map\+\_\+tests.\+cpp}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!occupancy\+\_\+map\+\_\+tests.\+cpp@{occupancy\+\_\+map\+\_\+tests.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Occupancy\+Map\+Tests, test\+Grid2world)}{TEST_F(OccupancyMapTests, testGrid2world)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Occupancy\+Map\+Tests}}]{, }
+\item[{test\+Grid2world}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{occupancy__map__tests_8cpp_a1544a2a9ceeb62fd58dd8ce9d3eba540}{}\label{occupancy__map__tests_8cpp_a1544a2a9ceeb62fd58dd8ce9d3eba540}
+
+
+test function to test grid2world method Occupancy\+Map class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests},the} & gtest framework \\
+\hline
+{\em get\+Set\+Map\+Metadata,the} & name of test \\
+\hline
+\end{DoxyParams}
+\index{occupancy\+\_\+map\+\_\+tests.\+cpp@{occupancy\+\_\+map\+\_\+tests.\+cpp}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!occupancy\+\_\+map\+\_\+tests.\+cpp@{occupancy\+\_\+map\+\_\+tests.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Occupancy\+Map\+Tests, test\+Detect\+Frontiers\+Center\+World)}{TEST_F(OccupancyMapTests, testDetectFrontiersCenterWorld)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Occupancy\+Map\+Tests}}]{, }
+\item[{test\+Detect\+Frontiers\+Center\+World}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{occupancy__map__tests_8cpp_a5188f97411144d62e660933c0b310b3d}{}\label{occupancy__map__tests_8cpp_a5188f97411144d62e660933c0b310b3d}
+
+
+test function to test detect\+Frontiers\+Center\+World method Occupancy\+Map class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests},the} & gtest framework \\
+\hline
+{\em get\+Set\+Map\+Metadata,the} & name of test \\
+\hline
+\end{DoxyParams}
+\index{occupancy\+\_\+map\+\_\+tests.\+cpp@{occupancy\+\_\+map\+\_\+tests.\+cpp}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!occupancy\+\_\+map\+\_\+tests.\+cpp@{occupancy\+\_\+map\+\_\+tests.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Occupancy\+Map\+Tests, test\+Read\+Occupancy\+Grid)}{TEST_F(OccupancyMapTests, testReadOccupancyGrid)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Occupancy\+Map\+Tests}}]{, }
+\item[{test\+Read\+Occupancy\+Grid}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{occupancy__map__tests_8cpp_ab5ac6991e479b745caec21f6f267c2b7}{}\label{occupancy__map__tests_8cpp_ab5ac6991e479b745caec21f6f267c2b7}
+
+
+test function to test read\+Occupancy\+Grid method Occupancy\+Map class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classOccupancyMapTests}{Occupancy\+Map\+Tests},the} & gtest framework \\
+\hline
+{\em test\+Read\+Occupancy\+Grid,the} & name of test \\
+\hline
+\end{DoxyParams}
