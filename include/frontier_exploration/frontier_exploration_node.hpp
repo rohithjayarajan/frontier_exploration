@@ -62,8 +62,6 @@ class FrontierExplore {
   ros::Publisher vel_;
   // declare variable to hold fixed value of angular velocity(degrees/sec)
   double angularVelZ_;
-  // declare variable which tells closest distance to potential collision
-  double collisionDist_;
   // declare variable to set publishing rate
   double frequency_;
   // queue holding the frontier points
