@@ -1,5 +1,6 @@
-Done processing ./src/frontier_exploration/test/map_structure_test.cpp
-Done processing ./src/frontier_exploration/test/helper_functions_test.cpp
+Done processing ./src/frontier_exploration/test/map_structure_tests.cpp
+Done processing ./src/frontier_exploration/test/frontier_exploration_node_tests.cpp
+Done processing ./src/frontier_exploration/test/occupancy_map_tests.cpp
 Done processing ./src/frontier_exploration/test/main.cpp
 Done processing ./src/frontier_exploration/include/frontier_exploration/occupancy_map.hpp
 Done processing ./src/frontier_exploration/include/frontier_exploration/frontier_exploration_node.hpp
