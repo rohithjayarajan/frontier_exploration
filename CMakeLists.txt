@@ -202,3 +202,29 @@ target_link_libraries(${PROJECT_NAME}_node
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+if(CATKIN_ENABLE_TESTING)
+  find_package(rostest REQUIRED)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0 --coverage")
+
+  add_rostest_gtest(
+  frontier_exploration_tests
+  test/frontier_exploration_tests.launch
+  test/main.cpp
+  test/frontier_exploration_node_tests.cpp
+  test/map_structure_tests.cpp
+  test/occupancy_map_tests.cpp
+  src/frontier_exploration_node.cpp
+  src/map_structure.cpp
+  src/occupancy_map.cpp
+  )
+  target_link_libraries(
+  frontier_exploration_tests
+  ${catkin_LIBRARIES}
+  )
+  add_dependencies(
+  frontier_exploration_tests
+  frontier_exploration_node
+  ${catkin_EXPORTED_TARGETS}
+  )
+endif()
